@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crocodile Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Crocodile Fun Facts</h1>
+        <p id="factDisplay">Click the button to see a fun fact!</p>
+        <button id="factButton">Show Random Fact</button>
+    </div>
+    <script>
+        const crocodileFacts = [
+            "Crocodiles can live for over 70 years in the wild.",
+            "They are known to be one of the oldest living species, dating back over 200 million years.",
+            "Crocodiles have a powerful bite, with a force of over 3,000 pounds per square inch.",
+            "They can hold their breath underwater for up to an hour while waiting for prey.",
+            "Crocodiles are cold-blooded reptiles, which means they rely on external temperatures to regulate their body heat.",
+            "They have a unique ability to see in color, which helps them hunt in various lighting conditions.",
+            "Crocodiles can swim at speeds of up to 20 miles per hour in short bursts.",
+            "They are known to be very territorial and will defend their territory aggressively.",
+            "Crocodiles can produce a wide range of vocalizations, including growls, hisses, and bellows.",
+            "Some species of crocodiles can even climb trees and bask in the sun on branches."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * crocodileFacts.length);
+            document.getElementById('factDisplay').innerText = crocodileFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
